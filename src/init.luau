@@ -67,8 +67,7 @@ const function restricted_edit_damerau_levenshtein_distance(left: string, right:
 		dist_cutoff = longer_window_length
 	end
 
-	const last_row_distances, diagonal_distances =
-		table.create(longer_window_length, 0), table.create(longer_window_length, 0)
+	const last_row_distances, diagonal_distances = table.create(longer_window_length, 0), table.create(longer_window_length, 0)
 
 	for column = 1, dist_cutoff do
 		last_row_distances[column] = column
